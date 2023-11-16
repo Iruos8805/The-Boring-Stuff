@@ -1,0 +1,69 @@
+Practice Questions
+
+1. Write an assert statement that triggers an AssertionError if the variable spam is an integer less than 10.
+
+2. Write an assert statement that triggers an AssertionError if the variables eggs and bacon contain strings that are the same as each other, even if their cases are different (that is, 'hello' and 'hello' are considered the same, and 'goodbye' and 'GOODbye' are also considered the same).
+
+3. Write an assert statement that always triggers an AssertionError.
+
+4. What are the two lines that your program must have in order to be able to call logging.debug()?
+
+5. What are the two lines that your program must have in order to have logging.debug() send a logging message to a file named programLog.txt?
+
+6. What are the five logging levels?
+
+7. What line of code can you add to disable all logging messages in your program?
+
+8. Why is using logging messages better than using print() to display the same message?
+
+9. What are the differences between the Step Over, Step In, and Step Out buttons in the debugger?
+
+10. After you click Continue, when will the debugger stop?
+
+11. What is a breakpoint?
+
+12. How do you set a breakpoint on a line of code in Mu?
+
+
+ANSWERS
+
+1.
+assert spam >= 10, 'The spam variable is less than 10.'
+
+2.
+assert eggs.upper() != bacon.upper(), 'The eggs and bacon variables are the same!'
+
+3.
+assert False, 'This always asserts an error'
+
+4.
+import logging
+logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s -  %(message)s')
+
+5.
+import logging
+>>> logging.basicConfig(filename='programLog.txt', level=logging.DEBUG,
+format=' %(asctime)s -  %(levelname)s -  %(message)s')
+
+6.
+DEBUG,WARNING,ERROR,INFO AND CRITICAL
+
+7.
+logging.disable(logging.CRITICAL)
+
+8.
+if we want ot remove all those print() we usedto find bugs, we have to remove it one by one. In caseof logging it can be done with a single line of code.
+
+9.
+The Step In button : will move the debugger into a function call. 
+The Step Over button: will quickly execute the function call without stepping into it. 
+The Step Out button :will quickly execute the rest of the code until it steps out of the function it currently is in.
+
+10.
+it will stop when the program end isreached or a breakpoint is reached.
+
+11.
+the debugger pauses when it reaches that line of code.
+
+12.
+click line number to make a red dot appear
